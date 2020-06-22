@@ -17,3 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::apiResource('message-templates', 'API\MessageTemplateController');
+Route::apiResource('messages', 'API\MessageController');
+Route::apiResource('rich-message-types', 'API\RichMessageTypeController');
+// Route::apiResource('rich-messages', 'API\RichMessageController');
+Route::post('/rich-messages', 'API\RichMessageController@store');
