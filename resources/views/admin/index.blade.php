@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 </head>
-<body>
+<body class="h-screen antialiased leading-none bg-gray-100">
     <div id="app">
     </div>
     <script src="{{ config('app.url') . mix('/dist/admin/main.js') }}"></script>

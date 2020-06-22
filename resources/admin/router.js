@@ -1,7 +1,9 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
-import Welcome from './pages/Welcome.vue';
+import IndexPage from './pages/Index.vue';
+import CreatePage from './pages/Create.vue';
+import EditPage from './pages/Edit.vue';
 
 Vue.use(Router);
 
@@ -10,9 +12,19 @@ export default new Router({
   base: 'admin',
   routes: [
     {
-      path: '/welcome',
-      component: Welcome,
-      name: 'welcome'
-    }
+      path: '/',
+      component: IndexPage,
+      name: 'index',
+    },
+    {
+      path: '/create',
+      component: CreatePage,
+      name: 'create',
+    },
+    {
+      path: '/:id/edit',
+      component: EditPage,
+      name: 'edit',
+    },
   ]
 });
