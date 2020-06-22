@@ -73,6 +73,8 @@ Run seeder
 php artisan db:seed #note, db:seed is truncating all tables and should only be run once in production.
 ```
 
+Access CMS: `baseurl/admin`
+
 ### Known bugs
 
 - Updating an existing rich message removes its previous images.
